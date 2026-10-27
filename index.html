@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Técnicas de Visualización de Datos</title>
+
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Cabecera simple -->
+  <header class="main-header">
+    <div class="header-inner">
+      <div class="logo-group">
+        <div class="logo-badge">V</div>
+        <div class="logo-text">
+          <h1>Técnicas de Visualización de Datos</h1>
+        </div>
+      </div>
+
+      <nav class="nav-tabs" aria-label="Navegación">
+        <button class="tab-btn active" data-tab="tab-heatmap" id="btn-tab-heatmap" onclick="switchTab('tab-heatmap')">
+          <span class="badge-num">1</span> Heatmap
+        </button>
+        <button class="tab-btn" data-tab="tab-raincloud" id="btn-tab-raincloud" onclick="switchTab('tab-raincloud')">
+          <span class="badge-num">2</span> Raincloud Plot
+        </button>
+        <button class="tab-btn" data-tab="tab-spiral" id="btn-tab-spiral" onclick="switchTab('tab-spiral')">
+          <span class="badge-num">3</span> Spiral Plot
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="app-container">
+
+    <!-- ====================================================================
+         1. HEATMAP (MAPA DE CALOR)
+         ==================================================================== -->
+    <section id="tab-heatmap" class="tab-content active">
+      <div class="technique-header">
+        <h2 class="technique-title">1. Heatmap: Anomalías Térmicas en España (1970 - 2024)</h2>
+      </div>
+
+      <div class="viz-panel">
+        <div class="chart-img-container">
+          <img src="grafico1_heatmap.png" alt="1. Heatmap: Anomalías Térmicas en España (1970 - 2024)" class="chart-img" width="950">
+        </div>
+
+        <!-- Fuente de datos y enlace oficial -->
+        <div class="data-source-footer">
+          <span>Fuente de datos: <strong>Observatorio Fabra (Meteocat / AEMET) · Open Data BCN (datos.gob.es)</strong></span>
+          <a href="https://opendata-ajuntament.barcelona.cat/data/dataset/temperatures-hist-bcn" target="_blank" rel="noopener" class="source-link">Acceder al portal Open Data ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         2. RAINCLOUD PLOT (NUBE DE LLUVIA)
+         ==================================================================== -->
+    <section id="tab-raincloud" class="tab-content">
+      <div class="technique-header">
+        <h2 class="technique-title">2. Raincloud Plot: Esperanza de Vida por Continente (140 Países)</h2>
+      </div>
+
+      <div class="viz-panel">
+        <div class="chart-img-container">
+          <img src="grafico2_raincloud.png" alt="2. Raincloud Plot: Esperanza de Vida por Continente (140 Países)" class="chart-img" width="950">
+        </div>
+
+        <!-- Fuente de datos y enlace oficial -->
+        <div class="data-source-footer">
+          <span>Fuente de datos: <strong>Fundación Gapminder / División de Población de la ONU</strong> (140 países)</span>
+          <a href="https://www.gapminder.org/data/" target="_blank" rel="noopener" class="source-link">Acceder al portal Gapminder ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. SPIRAL PLOT (ESPIRAL CLIMÁTICA)
+         ==================================================================== -->
+    <section id="tab-spiral" class="tab-content">
+      <div class="technique-header">
+        <h2 class="technique-title">3. Spiral Plot: Anomalías Térmicas en España (1970 - 2024)</h2>
+      </div>
+
+      <div class="viz-panel">
+        <div class="chart-img-container">
+          <img src="grafico3_spiral.png" alt="3. Spiral Plot: Anomalías Térmicas en España (1970 - 2024)" class="chart-img" width="850">
+        </div>
+
+        <!-- Fuente de datos y enlace oficial -->
+        <div class="data-source-footer">
+          <span>Fuente de datos: <strong>Observatorio Fabra (Meteocat / AEMET) · Open Data BCN (datos.gob.es)</strong> (Mismo dataset que el Heatmap)</span>
+          <a href="https://opendata-ajuntament.barcelona.cat/data/dataset/temperatures-hist-bcn" target="_blank" rel="noopener" class="source-link">Acceder al portal Open Data ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <p>Visualización de Datos</p>
+  </footer>
+
+  <!-- Script ligero de navegación -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
