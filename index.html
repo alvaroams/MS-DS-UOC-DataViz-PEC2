@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <!-- Cabecera simple -->
+  <!-- Cabecera fija con navegación directa -->
   <header class="main-header">
     <div class="header-inner">
       <div class="logo-group">
@@ -25,16 +25,17 @@
         </div>
       </div>
 
-      <nav class="nav-tabs" aria-label="Navegación">
-        <button class="tab-btn active" data-tab="tab-heatmap" id="btn-tab-heatmap" onclick="switchTab('tab-heatmap')">
+      <!-- Enlaces directos a cada gráfico (funciona 100% nativo sin JavaScript) -->
+      <nav class="nav-tabs" aria-label="Navegación directa">
+        <a href="#sec-heatmap" class="nav-btn">
           <span class="badge-num">1</span> Heatmap
-        </button>
-        <button class="tab-btn" data-tab="tab-raincloud" id="btn-tab-raincloud" onclick="switchTab('tab-raincloud')">
+        </a>
+        <a href="#sec-raincloud" class="nav-btn">
           <span class="badge-num">2</span> Raincloud Plot
-        </button>
-        <button class="tab-btn" data-tab="tab-spiral" id="btn-tab-spiral" onclick="switchTab('tab-spiral')">
+        </a>
+        <a href="#sec-spiral" class="nav-btn">
           <span class="badge-num">3</span> Spiral Plot
-        </button>
+        </a>
       </nav>
     </div>
   </header>
@@ -44,7 +45,7 @@
     <!-- ====================================================================
          1. HEATMAP (MAPA DE CALOR)
          ==================================================================== -->
-    <section id="tab-heatmap" class="tab-content active">
+    <section id="sec-heatmap" class="viz-section">
       <div class="technique-header">
         <h2 class="technique-title">1. Heatmap: Anomalías Térmicas en España (1970 - 2024)</h2>
       </div>
@@ -65,7 +66,7 @@
     <!-- ====================================================================
          2. RAINCLOUD PLOT (NUBE DE LLUVIA)
          ==================================================================== -->
-    <section id="tab-raincloud" class="tab-content">
+    <section id="sec-raincloud" class="viz-section">
       <div class="technique-header">
         <h2 class="technique-title">2. Raincloud Plot: Esperanza de Vida por Continente (140 Países)</h2>
       </div>
@@ -86,7 +87,7 @@
     <!-- ====================================================================
          3. SPIRAL PLOT (ESPIRAL CLIMÁTICA)
          ==================================================================== -->
-    <section id="tab-spiral" class="tab-content">
+    <section id="sec-spiral" class="viz-section">
       <div class="technique-header">
         <h2 class="technique-title">3. Spiral Plot: Anomalías Térmicas en España (1970 - 2024)</h2>
       </div>
@@ -109,9 +110,6 @@
   <footer class="main-footer">
     <p>Visualización de Datos</p>
   </footer>
-
-  <!-- Script ligero de navegación -->
-  <script src="js/main.js"></script>
 
 </body>
 </html>
