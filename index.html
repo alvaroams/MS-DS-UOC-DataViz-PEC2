@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,14 @@
   <!-- Tipografía -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Hoja de estilos -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
   <!-- Cabecera fija con navegación directa -->
@@ -52,13 +56,16 @@
 
       <div class="viz-panel">
         <div class="chart-img-container">
-          <img src="grafico1_heatmap.png" alt="1. Heatmap: Anomalías Térmicas en España (1970 - 2024)" class="chart-img" width="950">
+          <img src="grafico1_heatmap.png" alt="1. Heatmap: Anomalías Térmicas en España (1970 - 2024)" class="chart-img"
+            width="950">
         </div>
 
         <!-- Fuente de datos y enlace oficial -->
         <div class="data-source-footer">
-          <span>Fuente de datos: <strong>Observatorio Fabra (Meteocat / AEMET) · Open Data BCN (datos.gob.es)</strong></span>
-          <a href="https://opendata-ajuntament.barcelona.cat/data/dataset/temperatures-hist-bcn" target="_blank" rel="noopener" class="source-link">Acceder al portal Open Data ↗</a>
+          <span>Fuente de datos: <strong>Observatorio Fabra (Meteocat / AEMET) · Open Data BCN
+              (datos.gob.es)</strong></span>
+          <a href="https://opendata-ajuntament.barcelona.cat/data/dataset/temperatures-hist-bcn" target="_blank"
+            rel="noopener" class="source-link">Acceder al portal Open Data ↗</a>
         </div>
       </div>
     </section>
@@ -73,13 +80,16 @@
 
       <div class="viz-panel">
         <div class="chart-img-container">
-          <img src="grafico2_raincloud.png" alt="2. Raincloud Plot: Esperanza de Vida por Continente (140 Países)" class="chart-img" width="950">
+          <img src="grafico2_raincloud.png" alt="2. Raincloud Plot: Esperanza de Vida por Continente" class="chart-img"
+            width="950">
         </div>
 
         <!-- Fuente de datos y enlace oficial -->
         <div class="data-source-footer">
-          <span>Fuente de datos: <strong>Fundación Gapminder / División de Población de la ONU</strong> (140 países)</span>
-          <a href="https://www.gapminder.org/data/" target="_blank" rel="noopener" class="source-link">Acceder al portal Gapminder ↗</a>
+          <span>Fuente de datos: <strong>Fundación Gapminder / División de Población de la ONU</strong> (140
+            países)</span>
+          <a href="https://www.gapminder.org/data/" target="_blank" rel="noopener" class="source-link">Acceder al portal
+            Gapminder ↗</a>
         </div>
       </div>
     </section>
@@ -90,17 +100,42 @@
     <section id="sec-spiral" class="viz-section">
       <div class="technique-header">
         <h2 class="technique-title">3. Spiral Plot: Anomalías Térmicas en España (1970 - 2024)</h2>
+        <p class="section-subtitle">Comparativa de paleta cromática según las directrices de <strong>Jonathan Schwabish
+            (2021)</strong>:</p>
       </div>
 
       <div class="viz-panel">
-        <div class="chart-img-container">
-          <img src="grafico3_spiral.png" alt="3. Spiral Plot: Anomalías Térmicas en España (1970 - 2024)" class="chart-img" width="850">
+        <div class="version-toggle-container">
+
+          <!-- 1. VERSIÓN NEUTRA (SCHWABISH) - ABIERTA POR DEFECTO -->
+          <details class="palette-accordion" name="spiral-palette" open>
+            <summary class="palette-summary">
+              <span class="summary-title">Versión Neutra</span>
+            </summary>
+            <div class="chart-img-container">
+              <img src="grafico3_spiral_neutral.png" alt="3. Spiral Plot: Versión Neutra" class="chart-img" width="850">
+            </div>
+          </details>
+
+          <!-- 2. VERSIÓN CLÁSICA (ED HAWKINS) - DESPLEGABLE -->
+          <details class="palette-accordion" name="spiral-palette">
+            <summary class="palette-summary">
+              <span class="summary-title">Versión Clásica (Modelo Ed Hawkins 2016 · Paleta Azul a Rojo)</span>
+            </summary>
+            <div class="chart-img-container">
+              <img src="grafico3_spiral.png" alt="3. Spiral Plot: Versión Clásica (Azul a Rojo) - Modelo Ed Hawkins"
+                class="chart-img" width="850">
+            </div>
+          </details>
+
         </div>
 
         <!-- Fuente de datos y enlace oficial -->
         <div class="data-source-footer">
-          <span>Fuente de datos: <strong>Observatorio Fabra (Meteocat / AEMET) · Open Data BCN (datos.gob.es)</strong> (Mismo dataset que el Heatmap)</span>
-          <a href="https://opendata-ajuntament.barcelona.cat/data/dataset/temperatures-hist-bcn" target="_blank" rel="noopener" class="source-link">Acceder al portal Open Data ↗</a>
+          <span>Fuente de datos: <strong>Observatorio Fabra (Meteocat / AEMET) · Open Data BCN (datos.gob.es)</strong>
+            (Mismo dataset que el Heatmap)</span>
+          <a href="https://opendata-ajuntament.barcelona.cat/data/dataset/temperatures-hist-bcn" target="_blank"
+            rel="noopener" class="source-link">Acceder al portal Open Data ↗</a>
         </div>
       </div>
     </section>
@@ -112,4 +147,5 @@
   </footer>
 
 </body>
+
 </html>
